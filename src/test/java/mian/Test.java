@@ -11,16 +11,11 @@ public class Test {
     public static void main(String[] args) {
         SqlSession sqlSession = sqlSessionFactoryUtils.openSqlSession();
         userMapper um = sqlSession.getMapper(userMapper.class);
-//        List<User> u = sqlSession.selectList("userList");
-        String string = um.getUser(1);
+        //利用 sqlSession.getMapper获取 接口实例
         sqlSession.commit();
-//        for(User x:u){
-//            System.out.println(x.getId()+"----"+x.getGender());
-//        }
-
-//        System.out.println(user.getId()+"---"+user.getNickname());
-        System.out.println("string:"+string);
-        if(sqlSession!=null){
+        User user = um.getUser(1);
+        System.out.println(user.getId()+"---"+user.getAge()+"---"+user.getGender()+"---"+user.getCreateTime()+"---"+user.getUserStatus());
+        if( sqlSession!=null ){
             sqlSession.close();
         }
     }
