@@ -12,4 +12,12 @@ public class UserService {
         return userDao.getUserList();
     }
 
+    public User getUserById(int id){
+        return userDao.getUserById(id);
+    }
+
+    public void deleteUserById(int id){
+        userDao.deleteUserById(id);
+    }
+
 }

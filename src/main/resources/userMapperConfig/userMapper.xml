@@ -6,4 +6,12 @@
     <select id="getUser" resultType= "bean.User" >
       select * from users
     </select>
+
+    <select id="getUserById" resultType="bean.User">
+        select * from users where id = #{id}
+    </select>
+
+    <delete id="deleteUserById" >
+        delete * from users where id = #{id}
+    </delete>
 </mapper>
