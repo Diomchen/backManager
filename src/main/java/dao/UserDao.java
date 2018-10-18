@@ -15,8 +15,10 @@ public class UserDao {
     public List<User> getUserList(){
         sqlSession = sqlSessionFactoryUtils.openSqlSession();
         userMapper um = sqlSession.getMapper(userMapper.class);
+        //实例化接口
         sqlSession.commit();
         user = um.getUser();
+        sqlSessionFactoryUtils.closeSqlSession();
         return user;
     }
 }
