@@ -16,7 +16,7 @@ public class sqlSessionFactoryUtils{
     private sqlSessionFactoryUtils(){}
 
     public static SqlSessionFactory initSqlsessionFactory(){
-        String resources = "userMapperConfig/userMapper.xml";
+        String resources = "mybatisConfig/mybatisConfig.xml";
         InputStream inputStream = null;
         try {
             inputStream = Resources.getResourceAsStream(resources);
@@ -26,9 +26,9 @@ public class sqlSessionFactoryUtils{
         }
 //        同步锁
         synchronized (CLASS_LOCK){
-//            if(sqlSessionFactory == null){
+            if(sqlSessionFactory == null){
                 sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
-//            }
+            }
         }
         return sqlSessionFactory;
     }

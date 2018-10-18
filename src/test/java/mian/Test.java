@@ -12,14 +12,14 @@ public class Test {
         SqlSession sqlSession = sqlSessionFactoryUtils.openSqlSession();
         userMapper um = sqlSession.getMapper(userMapper.class);
 //        List<User> u = sqlSession.selectList("userList");
+        String string = um.getUser(1);
         sqlSession.commit();
-        User user = um.getUser(1);
-
 //        for(User x:u){
 //            System.out.println(x.getId()+"----"+x.getGender());
 //        }
 
-        System.out.println(user.getId()+"---"+user.getNickname());
+//        System.out.println(user.getId()+"---"+user.getNickname());
+        System.out.println("string:"+string);
         if(sqlSession!=null){
             sqlSession.close();
         }
