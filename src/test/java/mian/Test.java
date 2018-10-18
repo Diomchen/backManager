@@ -13,8 +13,8 @@ public class Test {
         userMapper um = sqlSession.getMapper(userMapper.class);
         //利用 sqlSession.getMapper获取 接口实例
         sqlSession.commit();
-        User user = um.getUser(1);
-        System.out.println(user.getId()+"---"+user.getAge()+"---"+user.getGender()+"---"+user.getCreateTime()+"---"+user.getUserStatus());
+//        User user = um.getUser(1);
+//        System.out.println(user.getId()+"---"+user.getAge()+"---"+user.getGender()+"---"+user.getCreateTime()+"---"+user.getUserStatus());
         if( sqlSession!=null ){
             sqlSession.close();
         }

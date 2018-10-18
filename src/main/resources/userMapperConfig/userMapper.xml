@@ -4,6 +4,6 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="mapper.userMapper">
     <select id="getUser" resultType= "bean.User" >
-      select * from users where id = #{id}
+      select * from users
     </select>
 </mapper>

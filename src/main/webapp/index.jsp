@@ -57,36 +57,6 @@
                         <a href="#">删除</a>
                     </td>
                 </tr>
-
-                <tr>
-                    <td>1</td>
-                    <td>admin</td>
-                    <td>小牧</td>
-                    <td>xiaomu@mooc.com</td>
-                    <td>1388888888</td>
-                    <td>2017-05-15</td>
-                    <td>正常</td>
-                    <td>
-                        <a href="#">查看</a>
-                        <a href="#">修改</a>
-                        <a href="#">删除</a>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>1</td>
-                    <td>admin</td>
-                    <td>小牧</td>
-                    <td>xiaomu@mooc.com</td>
-                    <td>1388888888</td>
-                    <td>2017-05-15</td>
-                    <td>正常</td>
-                    <td>
-                        <a href="#">查看</a>
-                        <a href="#">修改</a>
-                        <a href="#">删除</a>
-                    </td>
-                </tr>
             </table>
         </div>
     </div>

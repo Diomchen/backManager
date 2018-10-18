@@ -10,6 +10,7 @@ import java.io.InputStream;
 
 public class sqlSessionFactoryUtils{
     private static SqlSessionFactory sqlSessionFactory = null;
+    private static SqlSession sqlSession = null;
 //    下面是类线程锁
     private static final Class CLASS_LOCK = SqlSessionFactory.class;
 //    私有化对象，防止被多次使用造成资源浪费
@@ -38,5 +39,11 @@ public class sqlSessionFactoryUtils{
             initSqlsessionFactory();
         }
         return sqlSessionFactory.openSession();
+    }
+
+    public static void closeSqlSession(){
+        if(sqlSession!=null){
+            sqlSession.close();
+        }
     }
 }
