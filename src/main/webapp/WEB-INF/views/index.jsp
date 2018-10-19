@@ -55,9 +55,9 @@
                         <c:if test="${user.userStatus == 1}"><td>正常</td></c:if>
                         <c:if test="${user.userStatus == 2}"><td>锁定</td></c:if>
                         <td>
-                            <a href="examine.do">查看</a>
-                            <a href="modify.do">修改</a>
-                            <a href="delete.do">删除</a>
+                            <a href="examine.do?id=${user.id}">查看</a>
+                            <a href="modify.do?id=${user.id}">修改</a>
+                            <a href="delete.do?id=${user.id}">删除</a>
                         </td>
                     </tr>
                 </c:forEach>

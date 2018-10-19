@@ -8,10 +8,16 @@
     </select>
 
     <select id="getUserById" resultType="bean.User">
-        select * from users where id = #{id}
+        <if test="id != null">
+            select * from users where id = #{id}
+        </if>
     </select>
 
-    <delete id="deleteUserById" >
+    <!--<update id="updateUserById" >-->
+      <!---->
+    <!--</update>-->
+
+    <delete id="deleteUserById" parameterType="boolean">
         delete * from users where id = #{id}
     </delete>
 </mapper>
