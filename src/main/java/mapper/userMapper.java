@@ -10,4 +10,8 @@ public interface userMapper {
     User getUserById(int id);
 
     void deleteUserById(int id);
+
+    void updateUserByUser(User user);
+
+    void unlockId(int id);
 }

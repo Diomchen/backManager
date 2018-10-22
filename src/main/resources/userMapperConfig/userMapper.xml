@@ -11,11 +11,28 @@
       select * from users where id = #{id}
     </select>
 
-    <!--<update id="updateUserById" >-->
-      <!---->
-    <!--</update>-->
+    <update id="updateUserByUser">
+      update users
+        <set>
+              <if test="username != null">username = #{username},</if>
+              <if test="password != null">password = #{password},</if>
+              <if test="nickname != null">nickname = #{nickname},</if>
+              <if test="age != null">age = #{age},</if>
+              <if test="gender != null">gender = #{gender},</if>
+              <if test="phone != null">phone = #{phone},</if>
+              <if test="email != null">email = #{email},</if>
+              <if test="remark != null">remark = #{remark},</if>
+              <if test="updateTime != null">updateTime = #{updateTime},</if>
+                    userStatus = 2
+        </set>
+        where id = #{id}
+    </update>
 
     <delete id="deleteUserById" >
         delete  from users where id = #{id}
     </delete>
+
+    <update id="unlockId">
+        update users set userStatus = 1 where id = #{id}
+    </update>
 </mapper>

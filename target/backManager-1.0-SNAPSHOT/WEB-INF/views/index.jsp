@@ -60,7 +60,8 @@
                         <c:if test="${user.userStatus == 2}"><td>锁定</td></c:if>
                         <td>
                             <a href="examine.do?id=${user.id}">查看</a>
-                            <a href="modify.do?id=${user.id}">修改</a>
+                            <c:if test="${user.userStatus == 1}"><a href="modify.do?id=${user.id}">修改</a></c:if>
+                            <c:if test="${user.userStatus == 2}"><a href="unlock.do?id=${user.id}">解锁</a></c:if>
                             <a href="delete.do?id=${user.id}">删除</a>
                         </td>
                     </tr>

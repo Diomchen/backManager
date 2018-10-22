@@ -44,4 +44,20 @@ public class UserDao {
         sqlSessionFactoryUtils.closeSqlSession();
     }
 
+    public void updateUserByUser(User user){
+        sqlSession = sqlSessionFactoryUtils.openSqlSession();
+        userMapper um = sqlSession.getMapper(userMapper.class);
+        um.updateUserByUser(user);
+        sqlSession.commit();
+        sqlSessionFactoryUtils.closeSqlSession();
+    }
+
+    public void unlockId(int id){
+        sqlSession = sqlSessionFactoryUtils.openSqlSession();
+        userMapper um = sqlSession.getMapper(userMapper.class);
+        um.unlockId(id);
+        sqlSession.commit();
+        sqlSessionFactoryUtils.closeSqlSession();
+    }
+
 }

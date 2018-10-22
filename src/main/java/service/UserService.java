@@ -20,4 +20,9 @@ public class UserService {
         userDao.deleteUserById(id);
     }
 
+    public void updateUserByUser(User user){ userDao.updateUserByUser(user);}
+
+    public void unlockId(int id){
+        userDao.unlockId(id);
+    }
 }

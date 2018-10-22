@@ -17,6 +17,23 @@ public class User {
     private int userStatus;
     private String remark;
 
+    public User(int id, String username, String password, String nickname, int age, String gender, String phone, String email,  Date updateTime, String remark) {
+        this.id = id;
+        this.username = username;
+        this.password = password;
+        this.nickname = nickname;
+        this.age = age;
+        this.gender = gender;
+        this.phone = phone;
+        this.email = email;
+        this.updateTime = updateTime;
+        this.remark = remark;
+    }
+
+    public User(){
+
+    }
+
     public int getId() {
         return id;
     }

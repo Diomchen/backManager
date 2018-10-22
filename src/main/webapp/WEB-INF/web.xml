@@ -17,6 +17,25 @@
         <servlet-class>servlet.OperateServlets</servlet-class>
     </servlet>
     
+    <servlet>
+        <servlet-name>ModifyCheckServlet</servlet-name>
+        <servlet-class>servlet.ModifyCheckServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>unlockServlets</servlet-name>
+        <servlet-class>servlet.unlockServlets</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>unlockServlets</servlet-name>
+        <url-pattern>/unlock.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>ModifyCheckServlet</servlet-name>
+        <url-pattern>/modifyCheck.do</url-pattern>
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>OperateServlets</servlet-name>
         <url-pattern>/examine.do</url-pattern>
