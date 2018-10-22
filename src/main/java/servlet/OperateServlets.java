@@ -42,10 +42,9 @@ public class OperateServlets extends HttpServlet {
         }
         else if(Objects.equals(aTip,"/delete.do")){
 //            user = userService.getUserById(Integer.valueOf(userId));
-            if(userService.deleteUserById(Integer.valueOf(userId))){
-                request.setAttribute("userStatus",0);
-                request.getRequestDispatcher("/WEB-INF/views/index.jsp").forward(request,response);
-            }
+                userService.deleteUserById(Integer.valueOf(userId));
+//                request.setAttribute("userStatus",0);
+                request.getRequestDispatcher("/hello.jsp").forward(request,response);
         }
         else{
             request.getRequestDispatcher("/WEB-INF/error/404.jsp").forward(request,response);

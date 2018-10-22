@@ -36,13 +36,12 @@ public class UserDao {
     }
 
     //通过ID删除一个用户
-    public boolean deleteUserById(int id){
+    public void deleteUserById(int id){
         sqlSession = sqlSessionFactoryUtils.openSqlSession();
         userMapper um = sqlSession.getMapper(userMapper.class);
+        um.deleteUserById(id);
         sqlSession.commit();
-        boolean bl = um.deleteUserById(id);
         sqlSessionFactoryUtils.closeSqlSession();
-        return bl;
     }
 
 }

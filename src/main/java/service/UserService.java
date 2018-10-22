@@ -16,8 +16,8 @@ public class UserService {
         return userDao.getUserById(id);
     }
 
-    public boolean deleteUserById(int id){
-        return userDao.deleteUserById(id);
+    public void deleteUserById(int id){
+        userDao.deleteUserById(id);
     }
 
 }
